@@ -1,5 +1,5 @@
 // Stand reminder: remind to stand up every 50 minutes past the hour
-document.addEventListener(
+/* document.addEventListener(
   'DOMContentLoaded',
   function () {
     const checkPageButton = document.getElementById('clickIt');
@@ -15,6 +15,7 @@ document.addEventListener(
   },
   false
 );
+*/
 
 // create a function that sends a popup alert to stand after user input specified time amount
 function standAlert() {
@@ -23,6 +24,5 @@ function standAlert() {
   // const intervalConversion = interval * 60000;
   // convert interval (sec) to ms
   const intervalConversion = interval * 1000;
-
   setTimeout(alert('Get up and move'), intervalConversion);
 }
