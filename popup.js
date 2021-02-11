@@ -6,8 +6,8 @@ document.addEventListener(
     checkPageButton.addEventListener(
       'click',
       function () {
-        chrome.tabs.getSelected(null, function (tab) {
-          alert('TESTING!!!!');
+        // chrome.tabs.getSelected(null, function (tab) {
+        chrome.windows.getCurrent(null, standAlert();
         });
       },
       false
@@ -15,3 +15,11 @@ document.addEventListener(
   },
   false
 );
+
+// create a function that sends a popup alert to stand after user input specified time amount
+function standAlert() {
+  const interval = document.getElementById('userInput').value;
+  // convert interval (min) to ms
+  const intervalConversion = interval * 60000;
+  setTimeout(alert('Get up and move'), intervalConversion);
+}
