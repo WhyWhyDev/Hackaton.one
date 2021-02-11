@@ -1,7 +1,17 @@
 body {
-  background-color: red;
+  /* background-color: red; */
+  background-image: url("/icons/cloud.jpeg");
+  width: 250px;
+  height: 250px;
+  vertical-align: center;
 }
 
 h1 {
   background-color: blue;
 }
+
+#userInput {
+  background-color: green;
+
+}
+
