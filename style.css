@@ -1,0 +1,39 @@
+body {
+  /* background-color: red; */
+  background-image: url("/icons/cloud.jpeg");
+  width: 250px;
+  height: 250px;
+  vertical-align: center;
+}
+
+h1 {
+  background-color: #1f6ac7;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: white;
+}
+
+#userInput {
+  background-color:white;
+  font-size: 18px;
+
+}
+
+#zipcodeInput {
+  background-color:white;
+  font-size: 18px;
+
+}
+
+#time {
+  font-size: 80px;
+  font-family: impact;
+}
+
+#timer {
+  font-size: 16px;
+}
+
+#submitZipcode {
+  font-size: 16px;
+}

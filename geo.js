@@ -1,49 +1,8 @@
-console.log("i'm line 1");
-// get zipcode from user input
-let x;
-document.addEventListener(
-  'DOMContentLoaded',
-  function () {
-    const checkPageButton = document.getElementById('submitZipcode');
-    checkPageButton.addEventListener(
-      'click',
-      function () {
-        // variable to store zipcode
-        x = document.getElementById('zipcodeInput').value;
-        
-        chrome.tabs.getSelected(null, 
-          // insert function to be executed
-        );
-      },
-      false
-    );
-  },
-  false
-);
-
-console.log("i'm line 22");
-
-console.log("im x", x);
-
-function setCoordinates(obj) {
-  // get the corresponding lat/long coordinates based on user input of zipcode
-  for (let key of obj) {
-    
-  }
-  // set lat and lng coordinates 
-}
-
-
-
-
-
-
-
 const latLng = {
   55795:	[46.317812, -92.84315],
   45388:	[40.328535, -84.47938],
   39483:	[31.218509, -89.90761],
-  31503:	[31.205194, -82.37534],
+  31503:	[31.205194, -82.37534],ß
   45833:	[40.841409, -84.34178],
   34611:	[28.564167, -82.416515],
   95717:	[39.177026, -120.8451],
@@ -43232,54 +43191,3 @@ const latLng = {
   83212:	[42.514471, -112.54626],
   65280:	[39.213975, -91.73545],
 };
-
-
-
-let lat = latLng[x][0]
-console.log('lat: ', lat);
-let lng = latLng[x][1];
-console.log('lng: ', lng);
-
-let sunR;
-
-let sunS;
-
-// let timeZURL = `http://api.timezonedb.com/v2.1/get-time-zone?key=68AJZPSMRSDC&format=json&by=position&lat=${lat}&lng=${lng}`
-// console.log('timeZURL: ', timeZURL);
-
-let sunRSURL = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`
-console.log('sunSRURL: ', sunSRURL);
-
-// const dateObj = new Date();
-// const month = dateObj.getMonth() + 1; //months from 1-12
-// const day = dateObj.getDate();
-// const year = dateObj.getFullYear();
-// let timeR, timeS;
-
-
-// fetch(timeZURL)
-//   .then(response => response.text())
-//   .then(result => return result.abbreviation())
-//   .then(result => timeZone = result)
-
-
-// fetch(sunRSURL)
-//   .then(response => response.text())
-//   .then(result => timeR = result.sunrise; timeS = result.sunset);
-
-// let dateR = month + "/" + day + "/" + year + " " + timeR + " UTC";
-// let dateS = month + "/" + day + "/" + year + " " + timeS + " UTC";
-
-// const newDateR = new Date(dateR).toLocaleTimeString();
-// const newDateS = new Date(dateS).toLocaleTimeString();
-// const timeNow = dateObj.toLocaleTimeString()
-// const docBody = document.getElementsByTagName("body")[0]
-//if (timeNow > newDateR) {
-// docBody.style['background-color'] = "rgb(100,0,0)";
-//} else {
-// docBody.style.background = "rgb(100,0,0)";
-//}
-
-
-
-
