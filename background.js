@@ -5,39 +5,40 @@ console.log('helloStacy');
 // function buttonClicked(tab) {
 //   console.log(tab);
 // }
+window.navigator.geolocation.getCurrentPosition(console.log, console.log);
 
 ('use strict');
 
-const audio = {};
-audio.cache = {};
-audio.play = (id, src, n = 5) => {
-  audio.stop(id);
-  const e = new Audio();
-  e.addEventListener(
-    'ended',
-    function () {
-      n -= 1;
-      if (n > 0) {
-        e.currentTime = 0;
-        e.play();
-      } else {
-        delete audio.cache[id];
-      }
-    },
-    false
-  );
-  audio.cache[id] = e;
-  e.src = src;
-  e.play();
-};
-audio.stop = (id) => {
-  const e = audio.cache[id];
-  if (e) {
-    e.pause();
-    e.currentTime = 0;
-    delete audio.cache[id];
-  }
-};
+// const audio = {};
+// audio.cache = {};
+// audio.play = (id, src, n = 5) => {
+//   audio.stop(id);
+//   const e = new Audio();
+//   e.addEventListener(
+//     'ended',
+//     function () {
+//       n -= 1;
+//       if (n > 0) {
+//         e.currentTime = 0;
+//         e.play();
+//       } else {
+//         delete audio.cache[id];
+//       }
+//     },
+//     false
+//   );
+//   audio.cache[id] = e;
+//   e.src = src;
+//   e.play();
+// };
+// audio.stop = (id) => {
+//   const e = audio.cache[id];
+//   if (e) {
+//     e.pause();
+//     e.currentTime = 0;
+//     delete audio.cache[id];
+//   }
+// };
 
 const alarms = {
   create(name, info) {
