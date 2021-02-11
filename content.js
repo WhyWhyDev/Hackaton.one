@@ -23,6 +23,7 @@ document.addEventListener(
 
 console.log("i'm line 22");
 
+console.log("im x", x);
 
 function setCoordinates(obj) {
   // get the corresponding lat/long coordinates based on user input of zipcode
@@ -43233,24 +43234,52 @@ const latLng = {
 };
 
 
-console.log(x);
+
 let lat = latLng[x][0]
 console.log('lat: ', lat);
 let lng = latLng[x][1];
 console.log('lng: ', lng);
 
-let timeZURL = `http://api.timezonedb.com/v2.1/get-time-zone?key=68AJZPSMRSDC&format=json&by=position&lat=${lat}&lng=${lng}`
-console.log('timeZURL: ', timeZURL);
+let sunR;
 
-let sunSRURL = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`
+let sunS;
+
+// let timeZURL = `http://api.timezonedb.com/v2.1/get-time-zone?key=68AJZPSMRSDC&format=json&by=position&lat=${lat}&lng=${lng}`
+// console.log('timeZURL: ', timeZURL);
+
+let sunRSURL = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`
 console.log('sunSRURL: ', sunSRURL);
+
+// const dateObj = new Date();
+// const month = dateObj.getMonth() + 1; //months from 1-12
+// const day = dateObj.getDate();
+// const year = dateObj.getFullYear();
+// let timeR, timeS;
+
 
 // fetch(timeZURL)
 //   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
+//   .then(result => return result.abbreviation())
+//   .then(result => timeZone = result)
 
-// fetch(sunURL)
+
+// fetch(sunRSURL)
 //   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
+//   .then(result => timeR = result.sunrise; timeS = result.sunset);
+
+// let dateR = month + "/" + day + "/" + year + " " + timeR + " UTC";
+// let dateS = month + "/" + day + "/" + year + " " + timeS + " UTC";
+
+// const newDateR = new Date(dateR).toLocaleTimeString();
+// const newDateS = new Date(dateS).toLocaleTimeString();
+// const timeNow = dateObj.toLocaleTimeString()
+// const docBody = document.getElementsByTagName("body")[0]
+//if (timeNow > newDateR) {
+// docBody.style['background-color'] = "rgb(100,0,0)";
+//} else {
+// docBody.style.background = "rgb(100,0,0)";
+//}
+
+
+
+

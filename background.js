@@ -1,4 +1,3 @@
-console.log('hey')
 // // get zipcode from user input
 // document.addEventListener(
 //   'DOMContentLoaded',

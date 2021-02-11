@@ -26,26 +26,71 @@ document.addEventListener(
 );
 */
 
+
+
+// window.onload = function () {
+//   var fiveMinutes = 60 * 5,
+//       display = document.querySelector('#time');
+//   startTimer(fiveMinutes, display);
+// };
+
 document.addEventListener(
   'DOMContentLoaded',
   function () {
     const checkPageButton = document.getElementById('timer');
     checkPageButton.addEventListener(
       'click',
-      function () {
-        const interval = document.getElementById('userInput').value;
-        const intervalConversion = interval * 1000;
-        chrome.tabs.getSelected(null, 
-          // invoke timesUpAlert after intervalConversion
-          setTimeout(timesUpAlert, intervalConversion)
-        );
+      window.onload = function () {
+        // seconds
+        var fiveMinutes = 60 * document.getElementById('userInput').value,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
       },
+
+
+
+
+      // function () {
+      //   const interval = document.getElementById('userInput').value;
+      //   const intervalConversion = interval * 1000;
+      //   chrome.tabs.getSelected(null, 
+      //     // invoke timesUpAlert after intervalConversion
+      //     setTimeout(timesUpAlert, intervalConversion)
+      //   );
+      // },
+
+
+
+
       false
     );
   },
   false
 );
 
+
+
+
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10)
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          timer = duration;
+      }
+  }, 1000);
+  // console.log('duration', duration, duration * 60000)
+  // while (duration < 1) {
+  //   setTimeout(timesUpAlert, duration * 60000);
+  // }
+}
 
 // document.addEventListener(
 //   'DOMContentLoaded',
