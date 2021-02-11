@@ -5,17 +5,17 @@
   "description": "Keep you healthy?",
   "permissions": [],
   "icons": {
-    "16": "icons/logo_16x16.ico",
-    "48": "icons/logo_48x48.ico",
-    "128": "icons/logo_128x128.ico"
+    "16": "icons/logo_16x16.png",
+    "48": "icons/logo_48x48.png",
+    "128": "icons/logo_128x128.png"
   },
   "background": {
-    "js": ["background.js"]
+    "script": ["background.js"]
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["popup.js"]
     }
   ]
 }
