@@ -20,6 +20,9 @@ document.addEventListener(
 function standAlert() {
   const interval = document.getElementById('userInput').value;
   // convert interval (min) to ms
-  const intervalConversion = interval * 60000;
+  // const intervalConversion = interval * 60000;
+  // convert interval (sec) to ms
+  const intervalConversion = interval * 1000;
+
   setTimeout(alert('Get up and move'), intervalConversion);
 }
